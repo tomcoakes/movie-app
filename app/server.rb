@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class MovieApp < Sinatra::Base
   get '/' do
-    'Hello MovieApp!'
+    erb :index
   end
 
   # start the server if ruby file executed directly
