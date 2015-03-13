@@ -1,2 +1,19 @@
-<input name="movie-search">
-<input type="submit" value="Search">
+<form action="/search" method="post">
+  <input name="movie">
+  <input type="submit" value="Search">
+</form>
+
+<% if @api_hash %>
+  <p>Found <%= @api_hash["results"].count %> result<%="s" if @api_hash["results"].count > 1 %></p>
+  
+  <% @api_hash["results"].each do |movie| %>
+    <section class="movies">
+      <%= movie["title"] %>
+      <p>Release Date: <%= movie["release_date"] %></p>
+    </section>
+  <% end %>
+
+<a href="/search?movie=<%= @movie_title %>&page=<%= @page.to_i + 1%>">Show more results</a>
+
+  
+<% end %>
