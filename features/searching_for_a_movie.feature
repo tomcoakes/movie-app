@@ -22,5 +22,8 @@ Feature: Searching For A Movie
     Given I am on the homepage
     And I have entered "Saw" into the "movie" field
     When I press "Search"
-    And I click "Show more results"
+    Then I should not see "Previous page"
+    When I click "Next page"
     Then I should see "I Saw the Devil"
+    When I click "Previous page"
+    Then I should see "I Saw a Phantom Fish"
