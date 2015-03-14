@@ -25,5 +25,6 @@ Feature: Searching For A Movie
     Then I should not see "Previous page"
     When I click "Next page"
     Then I should see "I Saw the Devil"
+    And I should see "Page 2 of 6"
     When I click "Previous page"
     Then I should see "What the Moon Saw"

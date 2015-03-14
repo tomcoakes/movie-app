@@ -4,7 +4,7 @@
 </form>
 
 <% if @api_hash %>
-  <p>Found <%= @api_hash["total_results"] %> result<%="s" if @api_hash["results"].count > 1 || @api_hash["results"].count == 0 %></p>
+  <p>Found <%= @api_hash["total_results"] %> result<%="s" if @api_hash["results"].count > 1 || @api_hash["results"].count == 0 %> | Page <%= @page %> of <%= @api_hash["total_pages"] %></p>
   
   <% @api_hash["results"].each do |movie| %>
     <section class="movies">
