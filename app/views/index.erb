@@ -19,10 +19,6 @@
 <% end %>
 
 <% if @page.to_i != @api_hash["total_pages"].to_i %>
-
-<%= puts @page %>
-<%= puts @api_hash["total_pages"].to_i %>
-
   <a href="/search?movie=<%= @movie_title %>&page=<%= @page.to_i + 1%>">Next page</a>
 <% end %>
 

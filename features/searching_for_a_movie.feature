@@ -26,4 +26,4 @@ Feature: Searching For A Movie
     When I click "Next page"
     Then I should see "I Saw the Devil"
     When I click "Previous page"
-    Then I should see "I Saw a Phantom Fish"
+    Then I should see "What the Moon Saw"
